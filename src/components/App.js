@@ -1,33 +1,12 @@
-import React, { Component } from 'react';
-import { bindActionCreators } from 'redux'
-import { connect } from 'react-redux';
+import React from 'react';
+import Navbar from './Navbar';
+import Main from './Main';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
+const App = () => (
+  <div>
+    <Navbar />
+    <Main />
+  </div>
+)
 
-    this.state = {}
-  }
-
-  render() {
-    return (
-      <div>
-        We have an app!
-      </div>
-    );
-  }
-}
-
-const mapStateToProps = state => ({
-})
-
-const mapDispatchToProps = dispatch => ({
-  actions: bindActionCreators({  }, dispatch)
-})
-
-App = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(App);
-
-export default App;
+export default App
